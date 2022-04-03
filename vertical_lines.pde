@@ -2,9 +2,11 @@
 /*
 
   vertical lines - m-onz 2022
+  
+  toggle control panel with the "e" key
 
   projection mapping installation code.
-  consisting of any number of vertical lines.
+  consisting of any number of lines.
   intended to eventually run on raspberry pi's using processing. 3.5  
   
 */
@@ -12,14 +14,8 @@
 JSONObject json;
 ArrayList<Line> lines;
 
-void settings () {
-  size(640, 480);
-  //fullScreen(SPAN);
-  // // https://discourse.processing.org/t/solved-p2d-p3d-sketches-wont-start-on-fresh-ubuntu-18-04-installation/3568/33?u=neilcsmith
-  System.setProperty("jogl.disable.openglcore", "true");
-}
-
 void setup() {
+  fullScreen();
   lines = new ArrayList<Line>();
   smooth();
   colorMode(HSB);
@@ -30,17 +26,15 @@ void setup() {
 }
 
 void draw() {
-  
   strokeWeight(globalStrokeWeight);
-  
   if (millis() % 66000 < 33000) {
-    background(0);
+    background(globalBackgroundColor);
   } else if (!configurationMode) {
     fill (0, noise(frameCount * PI / 300)*11);
     noStroke();
     rect(0, 0, width, height);
   } else {
-    background(0);  
+    background(globalBackgroundColor);  
   }
   
   for (int i = lines.size()-1; i >= 0; i--) { 

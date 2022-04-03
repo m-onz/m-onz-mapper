@@ -2,6 +2,8 @@
 import oscP5.*;
 import netP5.*;
 
+// OSC is disabled. TODO... allow remote control
+
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 
