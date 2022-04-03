@@ -31,12 +31,12 @@ class Line {
     by2 = y2;
     seed = random(10000);
     dashSpeed = random(250) / 1000;
-    strokeWeight(5);
     rectMode(RADIUS);
     index = _index;
   }
   
   void display () {
+    
     if (mouseX > bx-boxSize && mouseX < bx+boxSize && 
       mouseY > by-boxSize && mouseY < by+boxSize) {
       overBox = true;  
@@ -74,8 +74,15 @@ class Line {
       fill(153);
       overBox2 = false;
     }
-    //rect(bx, by, boxSize, boxSize);
-    //rect(bx2, by2, boxSize, boxSize);
+
+    if (configurationMode) {
+      rect(bx, by, boxSize, boxSize);
+      rect(bx2, by2, boxSize, boxSize);
+      stroke(255);
+      line(bx, by, bx2, by2);
+      return; 
+    }
+    
     if (millis() % 66000 > 33000) {
       if (random(100)>50) {
         stroke(noise(frameCount*PI/3000 + seed) * 255);

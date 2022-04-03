@@ -25,21 +25,33 @@ void setup() {
   colorMode(HSB);
   loadData(); 
   controlSetup();
-  setupOSC ();
+  //setupOSC ();
   noCursor();
 }
 
 void draw() {
+  
+  strokeWeight(globalStrokeWeight);
+  
   if (millis() % 66000 < 33000) {
     background(0);
-  } else {
+  } else if (!configurationMode) {
     fill (0, noise(frameCount * PI / 300)*11);
     noStroke();
     rect(0, 0, width, height);
+  } else {
+    background(0);  
   }
+  
   for (int i = lines.size()-1; i >= 0; i--) { 
     Line line = lines.get(i);
     line.display();
+  }
+  
+  if (configurationMode == true) {
+    stroke(255);
+    line(0, mouseY, width, mouseY);
+    line(mouseX, 0, mouseX, height);
   }
 }
 
@@ -48,7 +60,7 @@ void mousePressed() {
     Line line = lines.get(i);
     line.mousePressed();
   }
-  testOSC();
+  //testOSC();
 }
 
 void mouseDragged() {
