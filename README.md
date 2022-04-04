@@ -7,7 +7,7 @@ Projection mapping involves using a projector to map light onto physical objects
 
 ## status
 
-Currently in auseful state for an upcoming projection mapping installation. This installation will be installed for the first two [fakedac~ events](https://fakedac.net/) that I am running. I will be suspending 22 1.2 metre strips of wood vertically, painted white from a goal post frame and using a 3700 Lumen projector and raspberry pi to run this software.
+Currently in a useful state for an upcoming projection mapping installation. This installation will be installed for the first two [fakedac~ events](https://fakedac.net/) that I am running. I will be suspending 22 1.2 metre strips of wood vertically, painted white from a goal post frame and using a 3700 Lumen projector and raspberry pi to run this software.
 
 ## processing compatibility
 
