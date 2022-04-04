@@ -1,7 +1,7 @@
 
 var fs = require('fs')
 
-var numLines = 33; // number of lines to generate
+var numLines = 22; // number of lines to generate
 var padding = 150;
 var width = padding+1024-padding; // canvas width
 var height = padding+768-padding; // canvas height

@@ -1,5 +1,5 @@
 
-# m-onz-mapper
+# m_onz_mapper
 
 m-onz personal projection mapping software. 
 Currently in a useful state for an upcoming projection mapping installation.
