@@ -1,6 +1,12 @@
-# vertical_lines
 
-projection mapping installation consisting of vertical lines. proof of concept is working.
+# m-onz-mapper
+
+m-onz personal projection mapping software. 
+Currently in a useful state for an upcoming projection mapping installation.
+
+## current features
+
+* map many straight lines
 
 ## usage
 
